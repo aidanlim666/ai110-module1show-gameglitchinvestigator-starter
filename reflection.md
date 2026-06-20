@@ -3,10 +3,8 @@
 Answer each question in 3 to 5 sentences. Be specific and honest about what actually happened while you worked. This is about your process, not trying to sound perfect.
 
 ## 1. What was broken when you started?
+The game has a submit guess button, new game button, and show hint toggle. The user is able to win the game by entering the correct number. The sidebar on the left shows number of attempts, range of numbers, and difficulty. Bugs I have noticed are wrong hints (opposite direction), as well as inability to start a new game with the 'new game' button (it doesn't allow me to guess again).
 
-- What did the game look like the first time you ran it?
-- List at least two concrete bugs you noticed at the start  
-  (for example: "the hints were backwards").
 
 **Bug Reproduction Log**
 
