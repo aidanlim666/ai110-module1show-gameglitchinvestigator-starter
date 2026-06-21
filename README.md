@@ -29,15 +29,20 @@ It wrote the code, ran away, and now the game is unplayable.
 - [ ] Detail which bugs you found.
 - [ ] Explain what fixes you applied.
 
+The game is a number guessing game, where the computer picks a secret number within the range (corresponding with difficulty), and the player attempts to guess it.
+Some bugs I found were the "new game" button broken, unable to win on even-numbered attempt, hints were opposite of what they were supposed to be, attempt counter was off by one, and difficulty levels were inconsistent.
+To fix this, I asked Claude Code, and it recommended to refactor all four functions into logic_utils.py and have app.py import them. I fixed the logic behind the attempt counter (initialized attempts to 0 and only increment on valid guess), added a start_new_game() helper, and removed the str() coersion, so comparisons are always between integers. I also made check_guess return just the outcome string, and corrected the hint directions.
+
+
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. Run python -m streamlit run app.py.
+2. Pick difficulty level in the sidebar.
+3. Type a guess and click submit, which returns a hint.
+4. Look at the hint and narrow down your next guess.
+5. Keep going until the game is over, and then click new game.
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
